@@ -13,7 +13,7 @@ export default {
         background: "#F7FAFF",
         darkBlue: "#1B4282",
         lightBlue: "#BDD6FF",
-        overlayBg: "#rgba(0,0,0,0.3)",
+        overlayBg: "rgba(0,0,0,0.4)",
       },
     },
   },
