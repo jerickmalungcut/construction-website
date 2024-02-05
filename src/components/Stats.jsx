@@ -3,7 +3,7 @@ import CardStats from "./Cards/CardStats";
 
 const Stats = () => {
   return (
-    <section className="bg-secondary">
+    <section className="gradient">
       <div className="max-w-screen-xl flex justify-around flex-wrap mx-auto">
         {STATS_DATA.map((item, index) => (
           <CardStats

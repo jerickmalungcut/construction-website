@@ -1,7 +1,8 @@
 import { useState } from "react";
-import logo from "../assets/logo.png";
+import Logo from "../assets/logo-main.png";
 import { RiMenu4Line, RiCloseFill } from "react-icons/ri";
 import MobileNav from "./MobileNav";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,28 +13,50 @@ const Navbar = () => {
 
   return (
     <>
-      {isMenuOpen && <MobileNav setIsMenuOpen={setIsMenuOpen} />}
+      {isMenuOpen && (
+        <MobileNav isOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      )}
       <div className="bg-background sticky z-10 top-0">
         <nav className="max-w-screen-xl mx-auto py-4 px-6">
           <div className="flex justify-between items-center">
-            <img src={logo} alt="logo" className="h-11 w-auto object-contain" />
+            <img src={Logo} alt="logo" className="h-11 w-auto object-contain" />
 
             <ul className="hidden md:flex md:gap-14">
               <li>
-                <a className="menu-item">Home</a>
+                <Link to="hero" smooth spy offset={-80} className="menu-item">
+                  Home
+                </Link>
               </li>
               <li>
-                <a className="menu-item">Services</a>
+                <Link
+                  to="services"
+                  smooth
+                  spy
+                  offset={-60}
+                  className="menu-item"
+                >
+                  Services
+                </Link>
               </li>
               <li>
-                <a className="menu-item">Our Work</a>
+                <Link to="work" smooth spy offset={-80} className="menu-item">
+                  Our Work
+                </Link>
               </li>
               <li>
-                <a className="menu-item">Testimonials</a>
+                <Link
+                  to="testimonials"
+                  smooth
+                  spy
+                  offset={-60}
+                  className="menu-item"
+                >
+                  Testimonials
+                </Link>
               </li>
             </ul>
 
-            <button className="hidden md:block h-10 bg-primary text-white text-sm px-6 rounded hover:bg-blue-200 hover:text-primary">
+            <button className="hidden md:block h-10 bg-primary text-white text-sm px-6 rounded hover:bg-blue-200 hover:text-primary transition-all duration-300">
               Contact Us
             </button>
             <button

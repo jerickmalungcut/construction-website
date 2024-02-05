@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,7 +7,6 @@
 @layer base {
   html {
     font-family: "Poppins", sans-serif;
-    scroll-behavior: smooth;
   }
 }
 
@@ -17,11 +16,19 @@
   }
 
   .primary-btn {
-    @apply h-11 bg-primary text-white text-sm px-6 rounded hover:bg-blue-200 hover:text-primary;
+    @apply h-11 bg-primary text-white text-sm px-6 rounded hover:bg-blue-200 hover:text-primary transition-all duration-300;
   }
 
   .hero-img {
     @apply w-1/4 h-5/6 rounded md:w-28 md:h-60 lg:w-44 lg:h-80;
+  }
+
+  .gallery-img {
+    @apply w-full h-72 md:h-full object-cover hover:scale-[1.2] transition-all duration-500;
+  }
+
+  .arrow-btn {
+    @apply bg-darkBlue p-1 border border-white rounded-md absolute top-[45%] hover:bg-blue-600 transition-all;
   }
 }
 
@@ -30,6 +37,10 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.gradient {
+  background: linear-gradient(96deg, #285091 11.46%, #11397e 91.65%);
 }
 
 .icon-img {
